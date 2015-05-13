@@ -24,6 +24,9 @@ src/_styles/main.scss public/css/main.css
 #convert ES^ JS to ES5
 ./node_modules/.bin/babel src --out-dir public -s inline
 
+# concat bower_components to lib directory
+./node_modules/.bin/bowcat . -o public/lib -m
+
 #clean uneeded files
 rm -rf public/_styles \
        public/*.jade \
